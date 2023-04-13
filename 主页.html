@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简易音乐播放器</title>
+  <!-- 加载样式文件 -->
+  <link rel="stylesheet" ref="./css/index.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="play_wrap">
+      <div class="search_bar">
+        <img src="images/player_title.png" alt=""/>
+        <!-- 搜索歌曲 -->
+        <input type="text" autocomplete="off" v-model='query' @keyup.enter="searchMusic();" />
+      </div>
+    </div>
+
+  </div>
+  
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- 官网提供的 axios 在线地址 -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="./js/main.js">
+    // 设置axios的基地址
+    axios.defaults.baseURL = 'https://autumnfish.cn';
+    // axios.defaults.baseURL = 'http://localhost:3000';
+</script>
+</body>
+</html>
